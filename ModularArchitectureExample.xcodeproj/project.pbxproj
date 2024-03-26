@@ -14,6 +14,9 @@
 		214327D82BA9FC9100B71ED4 /* ModularArchitectureExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214327D72BA9FC9100B71ED4 /* ModularArchitectureExampleTests.swift */; };
 		214327E22BA9FC9100B71ED4 /* ModularArchitectureExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214327E12BA9FC9100B71ED4 /* ModularArchitectureExampleUITests.swift */; };
 		214327E42BA9FC9100B71ED4 /* ModularArchitectureExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214327E32BA9FC9100B71ED4 /* ModularArchitectureExampleUITestsLaunchTests.swift */; };
+		214327F42BAA07E500B71ED4 /* RootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F32BAA07E500B71ED4 /* RootFeature */; };
+		214327F62BAA07E500B71ED4 /* RootFeatureAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F52BAA07E500B71ED4 /* RootFeatureAPI */; };
+		214327F82BAA07E500B71ED4 /* RootFeatureUI in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F72BAA07E500B71ED4 /* RootFeatureUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21420D692BB33F2C0069CAAE /* RootAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RootAPI; sourceTree = "<group>"; };
 		214327C32BA9FC9000B71ED4 /* ModularArchitectureExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModularArchitectureExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		214327C62BA9FC9000B71ED4 /* ModularArchitectureExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularArchitectureExampleApp.swift; sourceTree = "<group>"; };
 		214327C82BA9FC9000B71ED4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		214327DD2BA9FC9100B71ED4 /* ModularArchitectureExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModularArchitectureExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		214327E12BA9FC9100B71ED4 /* ModularArchitectureExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularArchitectureExampleUITests.swift; sourceTree = "<group>"; };
 		214327E32BA9FC9100B71ED4 /* ModularArchitectureExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularArchitectureExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		214327F12BAA040400B71ED4 /* Root */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Root; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214327F82BAA07E500B71ED4 /* RootFeatureUI in Frameworks */,
+				214327F62BAA07E500B71ED4 /* RootFeatureAPI in Frameworks */,
+				214327F42BAA07E500B71ED4 /* RootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +82,12 @@
 		214327BA2BA9FC9000B71ED4 = {
 			isa = PBXGroup;
 			children = (
+				214327F02BAA023900B71ED4 /* Packages */,
 				214327C52BA9FC9000B71ED4 /* ModularArchitectureExample */,
 				214327D62BA9FC9100B71ED4 /* ModularArchitectureExampleTests */,
 				214327E02BA9FC9100B71ED4 /* ModularArchitectureExampleUITests */,
 				214327C42BA9FC9000B71ED4 /* Products */,
+				214327F22BAA07E500B71ED4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +137,22 @@
 			path = ModularArchitectureExampleUITests;
 			sourceTree = "<group>";
 		};
+		214327F02BAA023900B71ED4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				21420D692BB33F2C0069CAAE /* RootAPI */,
+				214327F12BAA040400B71ED4 /* Root */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		214327F22BAA07E500B71ED4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +169,11 @@
 			dependencies = (
 			);
 			name = ModularArchitectureExample;
+			packageProductDependencies = (
+				214327F32BAA07E500B71ED4 /* RootFeature */,
+				214327F52BAA07E500B71ED4 /* RootFeatureAPI */,
+				214327F72BAA07E500B71ED4 /* RootFeatureUI */,
+			);
 			productName = ModularArchitectureExample;
 			productReference = 214327C32BA9FC9000B71ED4 /* ModularArchitectureExample.app */;
 			productType = "com.apple.product-type.application";
@@ -588,6 +619,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		214327F32BAA07E500B71ED4 /* RootFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RootFeature;
+		};
+		214327F52BAA07E500B71ED4 /* RootFeatureAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RootFeatureAPI;
+		};
+		214327F72BAA07E500B71ED4 /* RootFeatureUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RootFeatureUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 214327BB2BA9FC9000B71ED4 /* Project object */;
 }
