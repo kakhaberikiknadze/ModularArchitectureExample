@@ -17,6 +17,9 @@
 		214327F42BAA07E500B71ED4 /* RootFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F32BAA07E500B71ED4 /* RootFeature */; };
 		214327F62BAA07E500B71ED4 /* RootFeatureAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F52BAA07E500B71ED4 /* RootFeatureAPI */; };
 		214327F82BAA07E500B71ED4 /* RootFeatureUI in Frameworks */ = {isa = PBXBuildFile; productRef = 214327F72BAA07E500B71ED4 /* RootFeatureUI */; };
+		21EB97DA2BD976B40084194B /* AuthenticationFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 21EB97D92BD976B40084194B /* AuthenticationFeature */; };
+		21EB97DC2BD976B40084194B /* AuthenticationFeatureAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 21EB97DB2BD976B40084194B /* AuthenticationFeatureAPI */; };
+		21EB97DE2BD976B40084194B /* AuthenticationFeatureUI in Frameworks */ = {isa = PBXBuildFile; productRef = 21EB97DD2BD976B40084194B /* AuthenticationFeatureUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		214327E12BA9FC9100B71ED4 /* ModularArchitectureExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularArchitectureExampleUITests.swift; sourceTree = "<group>"; };
 		214327E32BA9FC9100B71ED4 /* ModularArchitectureExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularArchitectureExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		214327F12BAA040400B71ED4 /* Root */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Root; sourceTree = "<group>"; };
+		21EB97D72BD970BC0084194B /* AuthenticationAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthenticationAPI; sourceTree = "<group>"; };
+		21EB97D82BD970D20084194B /* Authentication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Authentication; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				214327F82BAA07E500B71ED4 /* RootFeatureUI in Frameworks */,
+				21EB97DA2BD976B40084194B /* AuthenticationFeature in Frameworks */,
 				214327F62BAA07E500B71ED4 /* RootFeatureAPI in Frameworks */,
+				21EB97DE2BD976B40084194B /* AuthenticationFeatureUI in Frameworks */,
+				21EB97DC2BD976B40084194B /* AuthenticationFeatureAPI in Frameworks */,
 				214327F42BAA07E500B71ED4 /* RootFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +148,8 @@
 		214327F02BAA023900B71ED4 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				21EB97D82BD970D20084194B /* Authentication */,
+				21EB97D72BD970BC0084194B /* AuthenticationAPI */,
 				21420D692BB33F2C0069CAAE /* RootAPI */,
 				214327F12BAA040400B71ED4 /* Root */,
 			);
@@ -173,6 +183,9 @@
 				214327F32BAA07E500B71ED4 /* RootFeature */,
 				214327F52BAA07E500B71ED4 /* RootFeatureAPI */,
 				214327F72BAA07E500B71ED4 /* RootFeatureUI */,
+				21EB97D92BD976B40084194B /* AuthenticationFeature */,
+				21EB97DB2BD976B40084194B /* AuthenticationFeatureAPI */,
+				21EB97DD2BD976B40084194B /* AuthenticationFeatureUI */,
 			);
 			productName = ModularArchitectureExample;
 			productReference = 214327C32BA9FC9000B71ED4 /* ModularArchitectureExample.app */;
@@ -632,6 +645,18 @@
 		214327F72BAA07E500B71ED4 /* RootFeatureUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RootFeatureUI;
+		};
+		21EB97D92BD976B40084194B /* AuthenticationFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationFeature;
+		};
+		21EB97DB2BD976B40084194B /* AuthenticationFeatureAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationFeatureAPI;
+		};
+		21EB97DD2BD976B40084194B /* AuthenticationFeatureUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AuthenticationFeatureUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
