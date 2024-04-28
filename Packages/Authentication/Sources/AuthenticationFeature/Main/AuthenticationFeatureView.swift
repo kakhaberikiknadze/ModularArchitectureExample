@@ -1,8 +1,26 @@
-//
-//  File.swift
-//  
-//
-//  Created by Kakhi on 24.04.24.
-//
+import SwiftUI
+import ComposableArchitecture
 
-import Foundation
+public extension Authentication {
+    struct FeatureView: View {
+        private let store: StoreOf<FeatureReducer>
+        
+        private let containers = ContainerProvider()
+        private let features: FeatureProvider
+        
+        public init(
+            store: StoreOf<FeatureReducer>,
+            features: FeatureProvider
+        ) {
+            self.store = store
+            self.features = features
+        }
+        
+        public var body: some View {
+            containers
+                .login(store.scope(state: \.login, action: \.login))
+                .environment(containers)
+                .environment(features)
+        }
+    }
+}
