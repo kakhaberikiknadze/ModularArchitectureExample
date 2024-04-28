@@ -1,8 +1,14 @@
-//
-//  File.swift
-//  
-//
-//  Created by Kakhi on 24.04.24.
-//
-
-import Foundation
+extension RegisterReducer.State {
+    static var initial: Self {
+        .init(
+            usernamePlaceholder: "Username",
+            username: "",
+            passwordPlaceholder: "Password",
+            password: "",
+            confirmPasswordPlaceholder: "Confirm password",
+            confirmPassword: "",
+            submitButtonTitle: "Register",
+            isSubmitButtonDisabled: true
+        )
+    }
+}

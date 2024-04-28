@@ -1,8 +1,15 @@
-//
-//  File.swift
-//  
-//
-//  Created by Kakhi on 24.04.24.
-//
-
-import Foundation
+extension LoginReducer.State {
+    static var initial: Self {
+        .init(
+            viewState: .init(
+                usernamePlaceholder: "Username",
+                username: "",
+                passwordPlaceholder: "Password",
+                password: "",
+                submitButtonTitle: "Log in",
+                isSubmitButtonDisabled: true,
+                registerButtonTitle: "Register"
+            )
+        )
+    }
+}

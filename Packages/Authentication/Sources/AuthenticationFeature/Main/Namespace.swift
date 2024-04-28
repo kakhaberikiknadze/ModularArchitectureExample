@@ -1,8 +1,6 @@
-//
-//  File.swift
-//  
-//
-//  Created by Kakhi on 24.04.24.
-//
+import SwiftUI
 
-import Foundation
+public enum Authentication<
+    LoginView: View,
+    RegisterView: View
+> {}
