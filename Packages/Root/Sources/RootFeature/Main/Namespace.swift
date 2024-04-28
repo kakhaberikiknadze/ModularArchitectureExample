@@ -1,5 +1,13 @@
 import SwiftUI
+import AuthenticationAPI
 
 public enum Root<
-    HomeView: View
+    // MARK: - Features
+    
+    HomeView: View,
+        
+    // MARK: - External features
+        
+    AuthenticationReducer: AuthenticationFeatureReducing,
+    AuthenticationView: View
 > {}

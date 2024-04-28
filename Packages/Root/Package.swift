@@ -13,6 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../RootAPI"),
+        .package(path: "../AuthenticationAPI"),
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             from: "1.9.0"
@@ -22,6 +23,7 @@ let package = Package(
         .target(
             name: "RootFeature",
             dependencies: [
+                "AuthenticationAPI",
                 "RootFeatureAPI",
                 "RootAPI",
                 .product(name: "ComposableArchitecture", package: "swift-composable-architecture")

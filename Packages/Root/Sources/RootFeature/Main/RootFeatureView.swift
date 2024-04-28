@@ -8,13 +8,16 @@ public extension Root {
         
         private let containers = ContainerProvider()
         private let features: FeatureProvider
+        private let externalFeatures: ExternalFeatureProvider
         
         public init(
             store: StoreOf<R>,
-            features: FeatureProvider
+            features: FeatureProvider,
+            externalFeatures: ExternalFeatureProvider
         ) {
             self.store = store
             self.features = features
+            self.externalFeatures = externalFeatures
         }
         
         public var body: some View {
@@ -22,6 +25,7 @@ public extension Root {
                 .home(store.scope(state: \.home, action: \.home))
                 .environment(containers)
                 .environment(features)
+                .environment(externalFeatures)
         }
     }
 }

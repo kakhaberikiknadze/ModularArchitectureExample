@@ -19,4 +19,19 @@ public extension Root {
             _home(store)
         }
     }
+    
+    @Observable
+    final class ExternalFeatureProvider: Sendable {
+        private var _authentication: @Sendable (StoreOf<AuthenticationReducer>) -> AuthenticationView
+        
+        public init(
+            authentication: @Sendable @escaping (StoreOf<AuthenticationReducer>) -> AuthenticationView
+        ) {
+            _authentication = authentication
+        }
+        
+        func audioMixer(_ store: StoreOf<AuthenticationReducer>) -> some View {
+            _authentication(store)
+        }
+    }
 }
